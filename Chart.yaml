@@ -1,0 +1,30 @@
+apiVersion: v2
+name: EKS Baseline
+description: Baseline Helm chart
+
+type: application
+version: 0.0.1
+appVersion: "1.0.0"
+
+dependencies:
+- name: aws-load-balancer-controller
+  version: "1.4.1"
+  repository: "https://aws.github.io/eks-charts"
+- name: cluster-autoscaler
+  version: "9.18.0"
+  repository: "https://kubernetes.github.io/autoscaler"
+- name: aws-for-fluent-bit
+  version: "0.1.16"
+  repository: "https://aws.github.io/eks-charts"
+- name: external-dns
+  version: "6.3.1"
+  repository: "https://charts.bitnami.com/bitnami"
+- name: metrics-server
+  version: "3.8.2"
+  repository: "https://kubernetes-sigs.github.io/metrics-server"
+- name: secrets-store-csi-driver
+  version: "1.1.2"
+  repository: "https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts"
+- name: csi-secrets-store-provider-aws
+  version: "0.0.2"
+  repository: "https://aws.github.io/eks-charts"
